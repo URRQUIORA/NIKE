@@ -1,0 +1,385 @@
+@charset "utf-8";
+/* COMMON */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{margin: 0; padding: 0;}
+body,html{font-size: 12px;}
+h1,h2,h3,h4,h5,h6{font-size: 100%;}
+ul,ol{list-style : none;}
+a{text-decoration: none; color: inherit;}
+img{vertical-align: bottom;}
+address{font-style: normal;}
+
+#wrap{
+    width: 100%;
+    min-width: 1600px;
+}
+.boxalign{
+    width: 1600px;
+    margin: 0 auto;
+    /* border: 1px solid;     */
+}
+
+/* HEADER */
+header{padding: 0.5rem 0;}
+header .boxalign{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    /* border: 1px solid red; */
+}
+header .logo h1{}
+header .logo h1 a{}
+header .logo h1 a img{
+    width: 80px;   
+    height: 80px;
+    padding: 0 10rem 0 0;
+}
+
+header nav{
+    /* border: 1px solid blue; */
+}
+header nav ul{
+    display: flex;
+    gap: 3rem;
+}
+header nav ul li{
+    border-bottom: 2px solid transparent;
+    padding: 0.6rem 0;
+    transition: 0.3s;
+}
+header nav ul li:hover{
+    border-bottom: 2px solid;
+}
+header nav ul li a{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+header .searchbox{
+    display: flex;
+    gap: 1rem;
+}
+
+header .shoppingbox{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+header .shoppingbox input{
+    height: 34px;
+    padding-left: 4rem;
+    font-family: 'Pretendard-Regular';
+    font-weight: 200;
+    letter-spacing: 2px;
+    
+}
+
+#search{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 10px;
+}
+header .search-item{
+    display: inline-block;
+    border-radius: 30px;
+    
+}
+
+header .shoppingbox a{
+    padding: 1rem;
+    transition: 0.3s;
+    border-radius: 50%;
+    /* border: 1px solid; */
+}
+header .shoppingbox a:hover{
+    background-color: #dfdfdf;
+    color: white;
+}
+#shopping{
+    width: 24px;
+    height: 24px;
+}
+#heart{
+    width: 24px;
+    height: 22px;
+}
+
+/* MAIN */
+main{
+    position: relative;
+    width: 100%;
+    height: 720px;
+    overflow: hidden;
+}
+main:hover .mbg{
+    transform: scale(1.1);
+}
+main .mbg{
+    background: url("./images/main_bg.jpg") center;
+    width: 100%;
+    height: 720px;
+    transition: 0.7s;
+}
+main .mtext{
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+    width: 480px;
+    height: 240px;
+    position: absolute;
+    /* top:0;  */
+    bottom: 2.6rem;
+    right:5%;
+    /* margin: auto 0; */
+    transition: 0.7s;
+
+}
+main:hover .mtext{
+    transform: translateX(-10%);
+}
+main .mtext .textcover{
+    font-family: 'Pretendard-Regular';
+    text-align: right;
+    color: white;
+    text-shadow: 0 0.5px 2px black;
+}
+main .mtext span{
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background: rgba(255,255,255,0);
+    transition-duration: 0.2s;
+}
+main:hover .mtext span{
+    display: inline-block;
+    width: 2px;
+    height: 130px;
+    background: #fff;
+}
+
+main .mtext .textcover h4{
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+}
+main .mtext .textcover h1{
+    font-size: 2.4rem;
+    padding: 0.3rem 0 2rem ;
+    letter-spacing: 1.2px;
+}
+main .mtext .textcover p{
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    letter-spacing: 0.6px;
+    padding: 1.2rem 0;
+    text-shadow: none;
+    color: rgba(255,255,255,0);
+    transition: 0.7s;
+}
+
+main:hover .mtext .textcover p{
+    transform: translateY(30%);
+    color: rgba(255,255,255,100);
+    text-shadow: 0 0.5px 2px black;
+
+}
+main .mtext .textcover a{
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    font-size: 1.1rem;
+    font-weight: 200;
+    padding: 0.8rem 1.6rem;
+    border-radius: 40px;
+    border: 1px solid white;
+    transition: 0.7s;
+}
+main:hover .mtext .textcover a{
+    transform: translateY(68px);
+}
+main .mtext .textcover a:hover{
+    background-color: #fff;
+    color: black;
+    text-shadow: none;
+    border: 1px solid white;
+}
+
+/* SECTION */
+section{
+    padding: 8rem 0;
+}
+section ul{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+section ul li{
+    width: 350px;
+    height: 480px;
+    position:relative;
+    overflow: hidden;
+    
+}
+section ul li:hover .imgbox{
+    transform: scale(1.05);
+}
+section ul li .imgbox{
+    transition: 0.7s;
+}
+
+section ul li .textbox{
+    display: inline-block;
+    width: 350px;
+    height: 480px;
+    color: rgb(44, 44, 44);
+    position: absolute;
+    top: 0;
+
+}
+section ul li:hover .textbox{
+    background: rgba(0,0,0,.3);
+    color: white;
+    text-shadow: 0 0.5px 0.2px black;
+}
+section ul li .textbox h6{
+    font-family: 'Pretendard-Regular';
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 100px;
+    padding: px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+section ul li .textbox h2{
+    font-family: 'Pretendard-Regular';
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin-top: 0.2rem;
+    margin-left: 2rem;
+}
+section ul li .textbox span{
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: transparent;
+    margin : 1rem 2rem 1rem;
+    transition: 0.7s;
+}
+section ul li:hover .textbox span{
+    display: block;
+    width: 280px;
+    height: 2px;
+    background-color: #fff;
+    box-shadow: 0 0.5px 0.2px black;
+}
+section ul li .textbox p{
+    /* border: 1px solid; */
+    font-family: 'Pretendard-Regular';
+    font-size: 1.1rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    margin: 0 2rem 1rem;
+    color: transparent;
+    transition: 0.7s;
+}
+section ul li:hover .textbox p{
+    color: #fff;
+}
+section ul li .textbox i{ 
+    font-family: 'Pretendard-Regular';
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    margin-left: 2rem;
+    position: absolute;
+    top: 100px;
+    transition: 0.7s;
+}
+section ul li:hover .textbox i{ 
+    transform: translateY(80px);
+    
+
+}
+section ul li .textbox a{
+    font-family: 'Pretendard-Regular';
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    padding: 1rem 2rem;
+    color: transparent;
+    border-radius: 40px;
+    transition:0.7s;
+}
+section ul li:hover .textbox a{
+    background-color: transparent;
+    color: white;
+    border: 1.8px solid white;
+    text-shadow: none;
+}
+section ul li .textbox a:hover{
+    background-color: white;
+    color: #797979;
+    border: 1.8px solid white;
+}
+
+/* FOOTER */
+footer{
+    padding: 4rem 0;
+    border-top: 1px solid black;
+}
+
+footer .boxalign ul{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+footer .boxalign ul li a{
+    font-family: 'Pretendard-Regular';
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    display: block;
+    color: black;
+    padding: 0 1rem;
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent;
+    transition: 0.3s;
+}
+footer .boxalign ul li a:hover{
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+footer .boxalign address{
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    font-weight: 200;
+    margin-top: 4rem;
+    padding-top: 4rem;
+    color: #3f3f3f;
+}
