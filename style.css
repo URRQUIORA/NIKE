@@ -66,47 +66,53 @@ header nav ul li a{
     font-weight: 700;
 }
 
-header .searchbox{
-    display: flex;
-    gap: 1rem;
-}
-
 header .shoppingbox{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
     position: relative;
 }
-header .shoppingbox input{
-    height: 34px;
-    padding-left: 4rem;
-    font-family: 'Pretendard-Regular';
-    font-weight: 200;
-    letter-spacing: 2px;
-    
-}
 
-#search{
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    left: 10px;
-}
+
 header .search-item{
     display: inline-block;
     border-radius: 30px;
-    
+    position: absolute;
+    right: 100px;
+    height: 32px;
+    padding-left: 2rem;
+    font-family: 'Pretendard-Regular';
+    font-weight: 200;
+    border: 2px solid transparent;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+header .search-item::placeholder{
+    color: #797979;
+}
+
+header .search-item:hover{
+    border: 2px solid #797979;
 }
 
 header .shoppingbox a{
-    padding: 1rem;
+    padding: 0.8rem;
     transition: 0.3s;
     border-radius: 50%;
-    /* border: 1px solid; */
 }
+
 header .shoppingbox a:hover{
     background-color: #dfdfdf;
-    color: white;
+}
+
+#searchicon{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 118px;
+    top: 10.2px;
+    opacity: 60%;
 }
 #shopping{
     width: 24px;
@@ -202,7 +208,7 @@ main .mtext .textcover a{
     position: absolute;
     top: 70px;
     right: 10%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 200;
     padding: 0.8rem 1.6rem;
     border-radius: 40px;
@@ -327,7 +333,7 @@ section ul li .textbox a{
     position: absolute;
     right: 30px;
     bottom: 30px;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.6rem;
     color: transparent;
     border-radius: 40px;
     transition:0.7s;
@@ -346,7 +352,7 @@ section ul li .textbox a:hover{
 
 /* FOOTER */
 footer{
-    padding: 4rem 0;
+    padding: 8rem 0;
     border-top: 1px solid black;
 }
 
@@ -379,7 +385,7 @@ footer .boxalign address{
     letter-spacing: 1px;
     line-height: 1.4;
     font-weight: 200;
-    margin-top: 4rem;
+    margin-top: 3rem;
     padding-top: 4rem;
     color: #3f3f3f;
 }
